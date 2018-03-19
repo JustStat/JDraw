@@ -14,10 +14,7 @@ import javax.swing.border.Border;
 import javax.swing.plaf.*;
 
 import Controller.ToolManager;
-import Model.Line;
-import Model.LineTool;
-import Model.ShapeManager;
-import Model.Tool;
+import Model.*;
 import net.miginfocom.swing.*;
 
 import static java.lang.Math.max;
@@ -57,6 +54,7 @@ public class MainForm extends JFrame {
             }
         });
         toolBar.add(new ToolButton(LineTool.class,"resources/Line.png",this));
+        toolBar.add(new ToolButton(RectangleTool.class, "resources/Rect.png", this));
 
     }
 

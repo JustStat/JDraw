@@ -33,11 +33,4 @@ public class ToolManager {
     public void mouseMoved(MouseEvent e) {
 //        currentTool.mouseMoved(e);
     }
-
-
-    public void paintCurrent(Graphics g) {
-        if (currentTool instanceof ShapeTool) {
-            ((ShapeTool) currentTool).paintShape(g);
-        }
-    }
 }

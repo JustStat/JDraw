@@ -27,6 +27,9 @@ public class RectangleTool extends ShapeTool implements IDraggable {
 
     @Override
     public void mouseReleased(MouseEvent e) {
+        keyPoints.set(1, e.getPoint());
+        shape.points.set(0, new Point(min(keyPoints.get(0).x, keyPoints.get(1).x), min(keyPoints.get(0).y, keyPoints.get(1).y)));
+        shape.points.set(1, new Point(max(keyPoints.get(0).x, keyPoints.get(1).x), max(keyPoints.get(0).y, keyPoints.get(1).y)));
         shape = null;
     }
 

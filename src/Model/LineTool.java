@@ -19,6 +19,7 @@ public class LineTool extends ShapeTool implements IDraggable {
 
     @Override
     public void mouseReleased(MouseEvent e) {
+        shape.points.set(1, e.getPoint());
         shape = null;
     }
 
