@@ -1,16 +1,26 @@
 package Controller;
 
-import Model.*;
+import Model.Tools.RectangleTool;
+import Model.Tools.ShapeTool;
+import Model.Tools.Tool;
 
-import javax.tools.Tool;
 import java.awt.Graphics;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 
 public class ToolManager {
     public Class currentToolClass;
-    public Model.Tool currentTool = new RectangleTool();
-    public ArrayList<Model.Tool> tools = new ArrayList<>();
+    public Tool currentTool = new RectangleTool();
+    public ArrayList<Tool> tools = new ArrayList<>();
+
+    private static ToolManager instance;
+
+    public static synchronized ToolManager getInstance() {
+        if (instance == null) {
+            instance = new ToolManager();
+        }
+        return instance;
+    }
 
     public void mousePressed(MouseEvent e) {
         tools.add(currentTool);
@@ -23,14 +33,15 @@ public class ToolManager {
 
 
     public void mouseDragged(MouseEvent e, Graphics g) {
-        if ((currentTool instanceof ShapeTool) && ((IDraggable) currentTool).isDragging()) {
-            return;
-        }
         currentTool.mouseDragged(e, g);
 
     }
 
     public void mouseMoved(MouseEvent e) {
-//        currentTool.mouseMoved(e);
+        currentTool.mouseMoved(e);
+    }
+
+    public Boolean needRepaint() {
+        return ((currentTool instanceof ShapeTool) && ((ShapeTool) currentTool).needRepaint());
     }
 }

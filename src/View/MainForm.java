@@ -8,14 +8,10 @@ import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionListener;
-import java.util.ArrayList;
 import javax.swing.*;
-import javax.swing.border.Border;
-import javax.swing.plaf.*;
 
 import Controller.ToolManager;
-import Model.*;
-import net.miginfocom.swing.*;
+import Model.Tools.*;
 
 import static java.lang.Math.max;
 import static java.lang.Math.min;
@@ -24,7 +20,7 @@ import static java.lang.Math.min;
  * @author unknown
  */
 public class MainForm extends JFrame {
-    public ToolManager toolManager = new ToolManager();
+    public ToolManager toolManager = ToolManager.getInstance();
     public MainForm() {
         initComponents();
 
@@ -40,21 +36,37 @@ public class MainForm extends JFrame {
                 super.mouseReleased(e);
                 toolManager.mouseReleased(e);
             }
+
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+            }
         });
         imagePanel.addMouseMotionListener(new MouseMotionListener() {
             @Override
             public void mouseDragged(MouseEvent e) {
                 toolManager.mouseDragged(e, getGraphics());
-                imagePanel.repaint();
+                if (toolManager.needRepaint()) {
+                    imagePanel.draw();
+                }
             }
 
             @Override
             public void mouseMoved(MouseEvent e) {
                 toolManager.mouseMoved(e);
+                if (toolManager.needRepaint()) {
+                    imagePanel.draw();
+                }
+
             }
         });
-        toolBar.add(new ToolButton(LineTool.class,"resources/Line.png",this));
-        toolBar.add(new ToolButton(RectangleTool.class, "resources/Rect.png", this));
+        toolBar.add(new ToolButton(LineTool.class,"/Line.png",this));
+        toolBar.add(new ToolButton(RectangleTool.class, "/Rectangle.png", this));
+        toolBar.add(new ToolButton(EllipseTool.class, "/Ellipse.png", this));
+        toolBar.add(new ToolButton(TriangleTool.class, "/Triangle.png", this));
+        toolBar.add(new ToolButton(PolylineTool.class, "/Polyline.png", this));
+        toolBar.add(new ToolButton(BezierTool.class, "/Bezier.png", this));
+        toolBar.add(new ToolButton(PolygonTool.class, "/Polygon.png", this));
 
     }
 
@@ -63,13 +75,7 @@ public class MainForm extends JFrame {
         // Generated using JFormDesigner Evaluation license - Kirill VVV
         dialogPane = new JPanel();
         toolBar = new JToolBar();
-        imagePanel = new JPanel() {
-            @Override
-            public void paint(Graphics g) {
-                super.paint(g);
-                ShapeManager.getInstance().paintAll(g);
-            }
-        };
+        imagePanel = new Canvas();
 
         //======== this ========
         Container contentPane = getContentPane();
@@ -81,7 +87,7 @@ public class MainForm extends JFrame {
             // JFormDesigner evaluation mark
             dialogPane.setBorder(new javax.swing.border.CompoundBorder(
                 new javax.swing.border.TitledBorder(new javax.swing.border.EmptyBorder(0, 0, 0, 0),
-                    "JFormDesigner Evaluation", javax.swing.border.TitledBorder.CENTER,
+                    null, javax.swing.border.TitledBorder.CENTER,
                     javax.swing.border.TitledBorder.BOTTOM, new java.awt.Font("Dialog", java.awt.Font.BOLD, 12),
                     java.awt.Color.red), dialogPane.getBorder())); dialogPane.addPropertyChangeListener(new java.beans.PropertyChangeListener(){public void propertyChange(java.beans.PropertyChangeEvent e){if("border".equals(e.getPropertyName()))throw new RuntimeException();}});
 
@@ -115,6 +121,6 @@ public class MainForm extends JFrame {
     // Generated using JFormDesigner Evaluation license - Kirill VVV
     private JPanel dialogPane;
     private JToolBar toolBar;
-    private JPanel imagePanel;
+    private Canvas imagePanel;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
 }

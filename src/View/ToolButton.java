@@ -1,19 +1,19 @@
 package View;
 
-import Model.Tool;
+import Model.Tools.Tool;
 
-import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.lang.reflect.Constructor;
+import java.net.URL;
 
 public class ToolButton extends JButton {
     public ToolButton(Class<?> toolClass, String iconPath, MainForm form) {
         try {
-//            Image iconImage = ImageIO.read(getClass().getResource(iconPath));
-//            setIcon(new ImageIcon(iconImage));
+            URL imgUrl = getClass().getResource(iconPath);
+            setIcon(new ImageIcon(imgUrl, "Line"));
         } catch (Exception ex) {
             System.out.println(ex);
         }
@@ -30,5 +30,6 @@ public class ToolButton extends JButton {
             }
         });
         setBackground(Color.RED);
+        setPreferredSize(new Dimension(50, 50));
     }
 }
