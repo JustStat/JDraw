@@ -11,5 +11,5 @@ public abstract class Tool {
 
     public abstract void mouseDragged(MouseEvent e, Graphics g);
 
-    public abstract void mouseMoved(MouseEvent e);
+    public abstract void mouseMoved(MouseEvent e, Graphics g);
 }

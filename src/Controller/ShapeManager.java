@@ -1,7 +1,5 @@
 package Controller;
 
-import Model.Shapes.Shape;
-
 import java.awt.*;
 import java.util.ArrayList;
 
@@ -20,7 +18,7 @@ public class ShapeManager {
 
     public void paintAll(Graphics g) {
         for (Shape shape:shapes) {
-                shape.paint(g);
+            ((Graphics2D)g).draw(shape);
 
         }
     }

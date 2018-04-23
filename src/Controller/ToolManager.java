@@ -37,8 +37,8 @@ public class ToolManager {
 
     }
 
-    public void mouseMoved(MouseEvent e) {
-        currentTool.mouseMoved(e);
+    public void mouseMoved(MouseEvent e, Graphics g) {
+        currentTool.mouseMoved(e, g);
     }
 
     public Boolean needRepaint() {

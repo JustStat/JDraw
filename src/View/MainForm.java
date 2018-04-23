@@ -8,6 +8,7 @@ import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionListener;
+import java.awt.geom.AffineTransform;
 import javax.swing.*;
 
 import Controller.ToolManager;
@@ -35,6 +36,9 @@ public class MainForm extends JFrame {
             public void mouseReleased(MouseEvent e) {
                 super.mouseReleased(e);
                 toolManager.mouseReleased(e);
+                if (toolManager.needRepaint()) {
+                    imagePanel.draw();
+                }
             }
 
             @Override
@@ -45,7 +49,7 @@ public class MainForm extends JFrame {
         imagePanel.addMouseMotionListener(new MouseMotionListener() {
             @Override
             public void mouseDragged(MouseEvent e) {
-                toolManager.mouseDragged(e, getGraphics());
+                toolManager.mouseDragged(e, imagePanel.getGraphics());
                 if (toolManager.needRepaint()) {
                     imagePanel.draw();
                 }
@@ -53,7 +57,7 @@ public class MainForm extends JFrame {
 
             @Override
             public void mouseMoved(MouseEvent e) {
-                toolManager.mouseMoved(e);
+                toolManager.mouseMoved(e, imagePanel.getGraphics());
                 if (toolManager.needRepaint()) {
                     imagePanel.draw();
                 }
@@ -65,8 +69,10 @@ public class MainForm extends JFrame {
         toolBar.add(new ToolButton(EllipseTool.class, "/Ellipse.png", this));
         toolBar.add(new ToolButton(TriangleTool.class, "/Triangle.png", this));
         toolBar.add(new ToolButton(PolylineTool.class, "/Polyline.png", this));
+        toolBar.add(new ToolButton(PolygonTool.class, "/Polygon.png", this));
         toolBar.add(new ToolButton(BezierTool.class, "/Bezier.png", this));
         toolBar.add(new ToolButton(PolygonTool.class, "/Polygon.png", this));
+        toolBar.add(new ToolButton(AffineTool.class, "/Transform.png", this));
 
     }
 

@@ -1,6 +1,6 @@
 package Model.Tools;
 
-import Model.Shapes.Shape;
+import java.awt.*;
 
 public abstract class ShapeTool extends Tool {
     protected Shape shape;

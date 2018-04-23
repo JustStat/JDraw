@@ -5,38 +5,35 @@ import Model.Shapes.BezierLine;
 
 import java.awt.*;
 import java.awt.event.MouseEvent;
+import java.awt.geom.CubicCurve2D;
 import java.util.ArrayList;
 import java.util.Collections;
 
 public class BezierTool extends ShapeTool {
+
+    Point startPoint;
     @Override
     public void mousePressed(MouseEvent e) {
         if (shape == null) {
-            shape = new BezierLine();
-            shape.points = new ArrayList<Point>(Collections.nCopies(1, new Point(0, 0)));
-            shape.points.set(0, e.getPoint());
+            shape = new CubicCurve2D.Double();
             ShapeManager.getInstance().shapes.add(shape);
+            startPoint = e.getPoint();
         }
     }
 
     @Override
     public void mouseReleased(MouseEvent e) {
-        if (e.getButton() == MouseEvent.BUTTON1) {
-            shape.points.add(e.getPoint());
-        } else if (e.getButton() == MouseEvent.BUTTON3) {
-            shape.points.set(shape.points.size() - 1, e.getPoint());
-            shape = null;
-        }
+        shape = null;
     }
 
     @Override
     public void mouseDragged(MouseEvent e, Graphics g) {
-        shape.points.set(shape.points.size() - 1, e.getPoint());
+        ((CubicCurve2D)shape).setCurve(startPoint, startPoint, e.getPoint(), e.getPoint());
     }
 
     @Override
-    public void mouseMoved(MouseEvent e) {
+    public void mouseMoved(MouseEvent e, Graphics g) {
         if (shape == null) { return;}
-        shape.points.set(shape.points.size() - 1, e.getPoint());
+
     }
 }
