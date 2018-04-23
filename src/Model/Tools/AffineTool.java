@@ -5,11 +5,11 @@ import Controller.ShapeManager;
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.geom.AffineTransform;
-import java.awt.geom.Path2D;
 import java.util.ArrayList;
 
 public class AffineTool extends ShapeTool {
-    Point startPoint;
+    private Point startPoint;
+    private double rtx = 0, rty = 0;
     @Override
     public void mousePressed(MouseEvent e) {
         startPoint = e.getPoint();
@@ -31,7 +31,10 @@ public class AffineTool extends ShapeTool {
         } else if (e.getButton() == MouseEvent.BUTTON3) {
             Rectangle rect = shape.getBounds();
             Point center = new Point(rect.x + rect.width / 2, rect.y + rect.height / 2);
-            transform.rotate(Math.toRadians(15), center.x, center.y);
+            Double theta = Math.atan2((rtx - center.x)*(e.getY() - center.y) - (e.getX() - center.x)*(rty - center.y), (rtx - center.x)*(e.getX() - center.x) + (e.getY() - center.y)*(rty - center.y));
+            transform.rotate(Math.toRadians(theta*57), center.x, center.y);
+            rtx = e.getX();
+            rty = e.getY();
         }
         shape = transform.createTransformedShape(shape);
         ShapeManager.getInstance().shapes.set(0, shape);

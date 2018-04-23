@@ -4,11 +4,13 @@ import Controller.ShapeManager;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
 
 public class Canvas extends JPanel {
     private Image img;
     private Graphics buf;
+    public double scale = 1;
 
     public Canvas() {
         img = new BufferedImage(1000, 1000, BufferedImage.TYPE_INT_ARGB);

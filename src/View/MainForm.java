@@ -5,9 +5,7 @@
 package View;
 
 import java.awt.*;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseMotionListener;
+import java.awt.event.*;
 import java.awt.geom.AffineTransform;
 import javax.swing.*;
 
@@ -64,6 +62,12 @@ public class MainForm extends JFrame {
 
             }
         });
+        imagePanel.addMouseWheelListener(new MouseWheelListener() {
+            @Override
+            public void mouseWheelMoved(MouseWheelEvent e) {
+
+            }
+        });
         toolBar.add(new ToolButton(LineTool.class,"/Line.png",this));
         toolBar.add(new ToolButton(RectangleTool.class, "/Rectangle.png", this));
         toolBar.add(new ToolButton(EllipseTool.class, "/Ellipse.png", this));
@@ -73,6 +77,8 @@ public class MainForm extends JFrame {
         toolBar.add(new ToolButton(BezierTool.class, "/Bezier.png", this));
         toolBar.add(new ToolButton(PolygonTool.class, "/Polygon.png", this));
         toolBar.add(new ToolButton(AffineTool.class, "/Transform.png", this));
+        toolBar.add(new ToolButton(ScaleTool.class, "/Scale.png", this));
+        toolBar.add(new ToolButton(SelectTool.class, "/Select.png", this));
 
     }
 
