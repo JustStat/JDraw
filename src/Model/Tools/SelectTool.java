@@ -33,7 +33,8 @@ public class SelectTool extends ShapeTool {
         ((Graphics2D)g).draw(shape);
         for (Shape ashape: ShapeManager.getInstance().shapes) {
             if (shape.intersects(ashape.getBounds2D())) {
-                ShapeManager.getInstance().selectedShapes.add(ashape);
+                Integer index = ShapeManager.getInstance().shapes.indexOf(ashape);
+                ShapeManager.getInstance().selectedShapes.add(index);
             }
         }
     }

@@ -21,6 +21,25 @@ new FormModel {
 					name: "imagePanel"
 					"background": sfield java.awt.Color white
 					"minimumSize": new java.awt.Dimension( 52, 52 )
+					add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridLayout ) {
+						"columns": 1
+						"rows": 3
+					} ) {
+						name: "panel1"
+						"preferredSize": new java.awt.Dimension( 50, 24 )
+						add( new FormComponent( "javax.swing.JLabel" ) {
+							name: "label1"
+							"text": "text"
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "textField2"
+						} )
+						add( new FormComponent( "javax.swing.JTextField" ) {
+							name: "textField3"
+						} )
+					}, new FormLayoutConstraints( class java.lang.String ) {
+						"value": "East"
+					} )
 				}, new FormLayoutConstraints( class java.lang.String ) {
 					"value": "Center"
 				} )

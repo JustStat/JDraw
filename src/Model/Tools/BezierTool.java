@@ -1,13 +1,10 @@
 package Model.Tools;
 
 import Controller.ShapeManager;
-import Model.Shapes.BezierLine;
 
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.geom.CubicCurve2D;
-import java.util.ArrayList;
-import java.util.Collections;
 
 public class BezierTool extends ShapeTool {
 
@@ -17,6 +14,7 @@ public class BezierTool extends ShapeTool {
         if (shape == null) {
             shape = new CubicCurve2D.Double();
             ShapeManager.getInstance().shapes.add(shape);
+            ShapeManager.getInstance().shapesClasses.add(shape.getClass());
             startPoint = e.getPoint();
         }
     }

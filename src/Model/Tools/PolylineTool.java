@@ -1,16 +1,11 @@
 package Model.Tools;
 
 import Controller.ShapeManager;
-import Model.Shapes.Polyline;
 
 import java.awt.*;
 import java.awt.event.MouseEvent;
-import java.awt.geom.AffineTransform;
 import java.awt.geom.Line2D;
 import java.awt.geom.Path2D;
-import java.awt.geom.Point2D;
-import java.util.ArrayList;
-import java.util.Collections;
 
 public class PolylineTool extends ShapeTool {
 
@@ -22,6 +17,7 @@ public class PolylineTool extends ShapeTool {
         if (shape == null) {
             shape = new Path2D.Double();
             ShapeManager.getInstance().shapes.add(shape);
+            ShapeManager.getInstance().shapesClasses.add(shape.getClass());
             ShapeManager.getInstance().shapes.add(tempSegment);
             ((Path2D.Double)shape).moveTo(e.getX(), e.getY());
             currPoint = e.getPoint();

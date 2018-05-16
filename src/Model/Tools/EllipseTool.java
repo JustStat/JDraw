@@ -2,6 +2,7 @@ package Model.Tools;
 
 import Controller.ShapeManager;
 import Model.Shapes.Ellipse;
+import Model.Shapes.IFillable;
 
 import java.awt.*;
 import java.awt.event.MouseEvent;
@@ -19,8 +20,9 @@ public class EllipseTool extends ShapeTool {
 
     @Override
     public void mousePressed(MouseEvent e) {
-        shape = new Ellipse2D.Double();
+        shape = new Ellipse();
         ShapeManager.getInstance().shapes.add(shape);
+        ShapeManager.getInstance().shapesClasses.add(shape.getClass());
         startPoint = e.getPoint();
     }
 

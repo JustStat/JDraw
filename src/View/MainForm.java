@@ -75,7 +75,6 @@ public class MainForm extends JFrame {
         toolBar.add(new ToolButton(PolylineTool.class, "/Polyline.png", this));
         toolBar.add(new ToolButton(PolygonTool.class, "/Polygon.png", this));
         toolBar.add(new ToolButton(BezierTool.class, "/Bezier.png", this));
-        toolBar.add(new ToolButton(PolygonTool.class, "/Polygon.png", this));
         toolBar.add(new ToolButton(AffineTool.class, "/Transform.png", this));
         toolBar.add(new ToolButton(ScaleTool.class, "/Scale.png", this));
         toolBar.add(new ToolButton(SelectTool.class, "/Select.png", this));
@@ -84,10 +83,14 @@ public class MainForm extends JFrame {
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
-        // Generated using JFormDesigner Evaluation license - Kirill VVV
+        // Generated using JFormDesigner Evaluation license - Kirill Varlamov
         dialogPane = new JPanel();
         toolBar = new JToolBar();
         imagePanel = new Canvas();
+        panel1 = new JPanel();
+        label1 = new JLabel();
+        textField2 = new JTextField();
+        textField3 = new JTextField();
 
         //======== this ========
         Container contentPane = getContentPane();
@@ -99,7 +102,7 @@ public class MainForm extends JFrame {
             // JFormDesigner evaluation mark
             dialogPane.setBorder(new javax.swing.border.CompoundBorder(
                 new javax.swing.border.TitledBorder(new javax.swing.border.EmptyBorder(0, 0, 0, 0),
-                    null, javax.swing.border.TitledBorder.CENTER,
+                    "JFormDesigner Evaluation", javax.swing.border.TitledBorder.CENTER,
                     javax.swing.border.TitledBorder.BOTTOM, new java.awt.Font("Dialog", java.awt.Font.BOLD, 12),
                     java.awt.Color.red), dialogPane.getBorder())); dialogPane.addPropertyChangeListener(new java.beans.PropertyChangeListener(){public void propertyChange(java.beans.PropertyChangeEvent e){if("border".equals(e.getPropertyName()))throw new RuntimeException();}});
 
@@ -120,6 +123,19 @@ public class MainForm extends JFrame {
                 imagePanel.setBackground(Color.white);
                 imagePanel.setMinimumSize(new Dimension(52, 52));
                 imagePanel.setLayout(new BorderLayout());
+
+                //======== panel1 ========
+                {
+                    panel1.setPreferredSize(new Dimension(50, 24));
+                    panel1.setLayout(new GridLayout(3, 1));
+
+                    //---- label1 ----
+                    label1.setText("text");
+                    panel1.add(label1);
+                    panel1.add(textField2);
+                    panel1.add(textField3);
+                }
+                imagePanel.add(panel1, BorderLayout.EAST);
             }
             dialogPane.add(imagePanel, BorderLayout.CENTER);
         }
@@ -130,9 +146,13 @@ public class MainForm extends JFrame {
     }
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
-    // Generated using JFormDesigner Evaluation license - Kirill VVV
+    // Generated using JFormDesigner Evaluation license - Kirill Varlamov
     private JPanel dialogPane;
     private JToolBar toolBar;
     private Canvas imagePanel;
+    private JPanel panel1;
+    private JLabel label1;
+    private JTextField textField2;
+    private JTextField textField3;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
 }

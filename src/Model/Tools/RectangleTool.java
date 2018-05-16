@@ -1,13 +1,12 @@
 package Model.Tools;
 
 import Controller.ShapeManager;
-import Model.Shapes.Rectange;
+import Model.Shapes.IEditable;
+import Model.Shapes.IFillable;
 
 import java.awt.*;
 import java.awt.event.MouseEvent;
-import java.awt.geom.Rectangle2D;
-import java.util.ArrayList;
-import java.util.Collections;
+import java.awt.geom.AffineTransform;
 
 import static java.lang.Math.max;
 import static java.lang.Math.min;
@@ -18,8 +17,9 @@ public class RectangleTool extends ShapeTool {
 
     @Override
     public void mousePressed(MouseEvent e) {
-        shape = new Rectangle();
+        shape = new Model.Shapes.Rectangle();
         ShapeManager.getInstance().shapes.add(shape);
+        ShapeManager.getInstance().shapesClasses.add(shape.getClass());
         startPoint = e.getPoint();
     }
 

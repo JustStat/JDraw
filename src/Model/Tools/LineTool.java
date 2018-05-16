@@ -6,8 +6,6 @@ import Model.Shapes.Line;
 import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.geom.Line2D;
-import java.util.ArrayList;
-import java.util.Collections;
 
 public class LineTool extends ShapeTool {
 
@@ -15,8 +13,9 @@ public class LineTool extends ShapeTool {
 
     @Override
     public void mousePressed(MouseEvent e) {
-        shape = new Line2D.Double();
+        shape = new Line();
         ShapeManager.getInstance().shapes.add(shape);
+        ShapeManager.getInstance().shapesClasses.add(shape.getClass());
         startPoint = e.getPoint();
     }
 
