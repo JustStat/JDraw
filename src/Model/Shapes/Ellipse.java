@@ -1,10 +1,13 @@
 package Model.Shapes;
 
+import Model.Shapes.Geometry.GEllipse;
+
 import java.awt.*;
 
 public class Ellipse extends Shape {
+    public int xRadius, yRadius;
     @Override
     public void paint(Graphics g) {
-        g.drawOval(points.get(0).x, points.get(0).y, points.get(1).x - points.get(0).x, points.get(1).y - points.get(0).y);
+        GEllipse.drawEllipse(points.get(0), xRadius, yRadius, g);
     }
 }

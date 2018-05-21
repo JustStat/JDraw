@@ -13,9 +13,6 @@ import javax.swing.*;
 import Controller.ToolManager;
 import Model.Tools.*;
 
-import static java.lang.Math.max;
-import static java.lang.Math.min;
-
 /**
  * @author unknown
  */
@@ -67,6 +64,7 @@ public class MainForm extends JFrame {
         toolBar.add(new ToolButton(PolylineTool.class, "/Polyline.png", this));
         toolBar.add(new ToolButton(BezierTool.class, "/Bezier.png", this));
         toolBar.add(new ToolButton(PolygonTool.class, "/Polygon.png", this));
+        toolBar.add(new ToolButton(AffineTool.class, "/Transform.png", this));
 
     }
 

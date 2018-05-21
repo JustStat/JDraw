@@ -13,7 +13,7 @@ public class PolylineTool extends ShapeTool {
     public void mousePressed(MouseEvent e) {
         if (shape == null) {
             shape = new Polyline();
-            shape.points = new ArrayList<Point>(Collections.nCopies(1, new Point(0, 0)));
+            shape.points = new ArrayList<>(Collections.nCopies(1, new Point(0, 0)));
             shape.points.set(0, e.getPoint());
             ShapeManager.getInstance().shapes.add(shape);
         }

@@ -8,34 +8,26 @@ import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 import java.util.Collections;
 
-import static java.lang.Math.max;
-import static java.lang.Math.min;
-
 public class EllipseTool extends ShapeTool {
-    private ArrayList<Point> keyPoints = new ArrayList<Point>(Collections.nCopies(2, new Point(0, 0)));
 
     @Override
     public void mousePressed(MouseEvent e) {
         shape = new Ellipse();
-        shape.points = new ArrayList<Point>(Collections.nCopies(2, new Point(0, 0)));
-        keyPoints.set(0, e.getPoint());
+        shape.points = new ArrayList<>(Collections.nCopies(1, new Point(0, 0)));
+        shape.points.set(0, e.getPoint());
         ShapeManager.getInstance().shapes.add(shape);
     }
 
     @Override
     public void mouseReleased(MouseEvent e) {
-        keyPoints.set(1, e.getPoint());
-        shape.points.set(0, new Point(min(keyPoints.get(0).x, keyPoints.get(1).x), min(keyPoints.get(0).y, keyPoints.get(1).y)));
-        shape.points.set(1, new Point(max(keyPoints.get(0).x, keyPoints.get(1).x), max(keyPoints.get(0).y, keyPoints.get(1).y)));
         shape = null;
     }
 
     @Override
     public void mouseDragged(MouseEvent e, Graphics g) {
-        keyPoints.set(1, e.getPoint());
-        shape.points.set(0, new Point(min(keyPoints.get(0).x, keyPoints.get(1).x), min(keyPoints.get(0).y, keyPoints.get(1).y)));
-        shape.points.set(1, new Point(max(keyPoints.get(0).x, keyPoints.get(1).x), max(keyPoints.get(0).y, keyPoints.get(1).y)));
-
+        Point center = shape.points.get(0);
+        ((Ellipse)shape).xRadius = (int)Math.sqrt(Math.pow(e.getX() - center.x, 2) + Math.pow(e.getY() - center.y, 2));
+        ((Ellipse)shape).yRadius = ((Ellipse)shape).xRadius*2;
     }
 
     @Override

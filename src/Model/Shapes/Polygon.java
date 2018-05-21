@@ -1,16 +1,15 @@
 package Model.Shapes;
 
+import Model.Shapes.Geometry.GLine;
+
 import java.awt.*;
 
 public class Polygon extends Shape {
     @Override
     public void paint(Graphics g) {
-        int[] pointsX = new int[points.size()];
-        int[] pointsY = new int[points.size()];
-        for (int i = 0; i < points.size(); i++) {
-            pointsX[i] = points.get(i).x;
-            pointsY[i] = points.get(i).y;
+        for (int i = 0; i < points.size() - 1; i++) {
+            GLine.drawLine(points.get(i).x, points.get(i).y, points.get(i+1).x, points.get(i+1).y, g);
         }
-        g.drawPolygon(pointsX, pointsY, points.size());
+        GLine.drawLine(points.get(points.size() - 1).x, points.get(points.size() - 1).y, points.get(0).x, points.get(0).y, g);
     }
 }
