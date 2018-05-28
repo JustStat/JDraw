@@ -6,9 +6,14 @@ import Model.Shapes.Shape;
 
 import java.awt.*;
 import java.awt.event.MouseEvent;
+import java.awt.geom.AffineTransform;
+
+import static java.lang.Math.PI;
 
 public class AffineTool extends ShapeTool {
     Point startPoint;
+    double curangle = 0;
+    int rtx = 0, rty = 0;
 
     @Override
     public void mousePressed(MouseEvent e) {
@@ -30,12 +35,15 @@ public class AffineTool extends ShapeTool {
                 GAffineTransforms.moveShape(shape, deltaX, deltaY);
             }
         } else {
+            curangle += getAngle(e.getPoint(), new Point(rtx, rty));
             for (Shape shape: ShapeManager.getInstance().shapes) {
-                GAffineTransforms.rotateShape(shape, Math.toRadians(30), GAffineTransforms.getShapeCenter(shape));
+
+                GAffineTransforms.rotateShape(shape, Math.toRadians(curangle));
+                rtx = e.getX();
+                rty = e.getY();
             }
         }
 
-        startPoint = e.getPoint();
     }
 
     @Override
@@ -46,5 +54,24 @@ public class AffineTool extends ShapeTool {
     @Override
     public Boolean needRepaint() {
         return true;
+    }
+
+    private double getAngle(Point origin, Point other) {
+        int dx, dy;
+        double angle;
+        dy = other.y - origin.y;
+        dx = other.x - origin.x;
+        if (dx == 0) // special case
+            angle = dy >= 0? PI/2: -PI/2;
+        else
+        {
+            angle = Math.atan(dy/dx);
+            if (dx < 0) // hemisphere correction
+                angle += PI;
+        }
+        // all between 0 and 2PI
+        if (angle < 0) // between -PI/2 and 0
+            angle += 2*PI;
+        return angle;
     }
 }

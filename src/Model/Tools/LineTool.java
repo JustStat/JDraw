@@ -1,6 +1,7 @@
 package Model.Tools;
 
 import Controller.ShapeManager;
+import Model.Shapes.Geometry.GAffineTransforms;
 import Model.Shapes.Line;
 
 import java.awt.*;
@@ -13,14 +14,16 @@ public class LineTool extends ShapeTool {
     @Override
     public void mousePressed(MouseEvent e) {
         shape = new Line();
-        shape.points = new ArrayList<Point>(Collections.nCopies(2, new Point(0, 0)));
-        shape.points.set(0, e.getPoint());
+        shape.points = new ArrayList<Point>(Collections.nCopies(2,  e.getPoint()));
+        shape.corePoints = new ArrayList<Point>(Collections.nCopies(2,  e.getPoint()));
+        GAffineTransforms.normalizeShape(shape);
         ShapeManager.getInstance().shapes.add(shape);
     }
 
     @Override
     public void mouseReleased(MouseEvent e) {
         shape.points.set(1, e.getPoint());
+        shape.corePoints.set(1, e.getPoint());
         shape = null;
     }
 

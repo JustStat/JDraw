@@ -1,6 +1,7 @@
 package Model.Tools;
 
 import Controller.ShapeManager;
+import Model.Shapes.Geometry.GAffineTransforms;
 import Model.Shapes.Polygon;
 import Model.Shapes.Polyline;
 
@@ -14,8 +15,9 @@ public class PolygonTool extends PolylineTool {
     public void mousePressed(MouseEvent e) {
         if (shape == null) {
             shape = new Polygon();
-            shape.points = new ArrayList<Point>(Collections.nCopies(1, new Point(0, 0)));
-            shape.points.set(0, e.getPoint());
+            shape.points = new ArrayList<>(Collections.nCopies(1, e.getPoint()));
+            shape.corePoints = new ArrayList<>(Collections.nCopies(1, e.getPoint()));
+            GAffineTransforms.normalizeShape(shape);
             ShapeManager.getInstance().shapes.add(shape);
         }
     }

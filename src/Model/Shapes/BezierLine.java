@@ -1,6 +1,7 @@
 package Model.Shapes;
 
 import java.awt.*;
+import java.awt.geom.Rectangle2D;
 import java.util.ArrayList;
 
 public class BezierLine extends Shape {
@@ -13,6 +14,11 @@ public class BezierLine extends Shape {
         for (double t=0; t<=1; t += 0.01)
             finalPoints.add(calculateBezierFunction(t, points));
         drawCurve(finalPoints, g);
+    }
+
+    @Override
+    public Rectangle2D getBounds() {
+        return null;
     }
 
     private Point calculateBezierFunction(double t, ArrayList<Point> srcPoints)

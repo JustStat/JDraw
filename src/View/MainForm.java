@@ -26,6 +26,9 @@ public class MainForm extends JFrame {
             public void mousePressed(MouseEvent e) {
                 super.mousePressed(e);
                 toolManager.mousePressed(e);
+                if (toolManager.needRepaint()) {
+                    imagePanel.draw();
+                }
             }
 
             @Override
@@ -65,6 +68,8 @@ public class MainForm extends JFrame {
         toolBar.add(new ToolButton(BezierTool.class, "/Bezier.png", this));
         toolBar.add(new ToolButton(PolygonTool.class, "/Polygon.png", this));
         toolBar.add(new ToolButton(AffineTool.class, "/Transform.png", this));
+        toolBar.add(new ToolButton(ScaleTool.class, "/Scale.png", this));
+        toolBar.add(new ToolButton(SelectTool.class, "/Select.png", this));
 
     }
 
