@@ -38,7 +38,7 @@ public class SelectTool extends ShapeTool {
 
     @Override
     public void mouseMoved(MouseEvent e) {
-
+        
     }
 
     @Override

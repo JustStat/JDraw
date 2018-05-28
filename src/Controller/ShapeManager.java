@@ -24,12 +24,10 @@ public class ShapeManager {
     public void paintAll(Graphics g) {
         for (Shape shape:shapes) {
                 shape.paint(g);
-            Rectangle2D bounds = shape.getBounds();
             if (selectedShapes.contains(shape)) {
-                g.drawRect((int)bounds.getX(), (int)bounds.getY(), (int)bounds.getWidth(),(int)bounds.getHeight());
+                GBounds.drawBounds(shape, g);
+                GBounds.drawCorePoints(shape, g);
             }
-
-
         }
     }
 }
