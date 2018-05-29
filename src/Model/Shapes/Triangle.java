@@ -28,9 +28,4 @@ public class Triangle extends Shape {
         GLine.drawLine(tPoints.get(nPoints - 1).x, tPoints.get(nPoints - 1).y, tPoints.get(0).x, tPoints.get(0).y, g);
 
     }
-
-    @Override
-    public Rectangle2D getBounds() {
-        return null;
-    }
 }

@@ -35,6 +35,9 @@ public class MainForm extends JFrame {
             public void mouseReleased(MouseEvent e) {
                 super.mouseReleased(e);
                 toolManager.mouseReleased(e);
+                if (toolManager.needRepaint()) {
+                    imagePanel.draw();
+                }
             }
 
             @Override

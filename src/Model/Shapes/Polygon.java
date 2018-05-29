@@ -13,9 +13,4 @@ public class Polygon extends Shape {
         }
         GLine.drawLine(points.get(points.size() - 1).x, points.get(points.size() - 1).y, points.get(0).x, points.get(0).y, g);
     }
-
-    @Override
-    public Rectangle2D getBounds() {
-        return null;
-    }
 }

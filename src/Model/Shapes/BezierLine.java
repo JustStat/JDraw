@@ -16,11 +16,6 @@ public class BezierLine extends Shape {
         drawCurve(finalPoints, g);
     }
 
-    @Override
-    public Rectangle2D getBounds() {
-        return null;
-    }
-
     private Point calculateBezierFunction(double t, ArrayList<Point> srcPoints)
     {   // ф-ия расчитывает очередную точку на кривой исходя из входного набора управляющих точек
         double x = 0;

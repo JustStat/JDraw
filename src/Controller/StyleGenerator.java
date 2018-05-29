@@ -6,7 +6,7 @@ import java.awt.geom.Rectangle2D;
 import java.util.ArrayList;
 
 public class StyleGenerator {
-    private Stroke getDashedStroke() {
+    public static Stroke getDashedStroke() {
         float dash1[] = {10.0f};
         BasicStroke dashed =
                 new BasicStroke(1.0f,

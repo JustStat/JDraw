@@ -11,6 +11,7 @@ public class ShapeManager {
 
     public ArrayList<Shape> shapes = new ArrayList<>();
     public ArrayList<Shape> selectedShapes = new ArrayList<>();
+    public ArrayList<java.awt.Shape> tempShapes = new ArrayList<>();
 
     private static ShapeManager instance;
 
@@ -28,6 +29,9 @@ public class ShapeManager {
                 GBounds.drawBounds(shape, g);
                 GBounds.drawCorePoints(shape, g);
             }
+        }
+        for (java.awt.Shape shape:tempShapes) {
+            ((Graphics2D)g).draw(shape);
         }
     }
 }

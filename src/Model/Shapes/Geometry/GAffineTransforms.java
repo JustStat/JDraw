@@ -7,8 +7,9 @@ import java.awt.*;
 public class GAffineTransforms  {
     public static void moveShape(Shape shape, int tx, int ty) {
 
-        shape.affineMatrixTranslation = getTranslationMatrix(tx, ty);
-
+//        shape.affineMatrixTranslation = getTranslationMatrix(tx, ty);
+        shape.affineMatrixTranslation[2][0] += tx/2;
+        shape.affineMatrixTranslation[2][1] += ty/2;
         GAffineTransforms.applyTransformsForShape(shape);
 
     }
@@ -54,6 +55,34 @@ public class GAffineTransforms  {
         return tp;
     }
 
+    public static Point applyInverseTransformForPoint(Shape shape, Point point) {
+        Point tp = new Point(0,0);
+        double[] pv = new double[3];
+        pv[0] = point.x;
+        pv[1] = point.y;
+        pv[2] = 1;
+
+        double[][] tm = getInverseMatrix(getShapeTransformMatrix(shape));
+
+        double[] dpv = new double[3];
+        final int rowCount = 1;             // Число строк результирующей матрицы.
+        final int colCount = 3;         // Число столбцов результирующей матрицы.
+        final int sumLength = 3;         // Число членов суммы при вычислении значения ячейки.
+
+        for (int row = 0; row < rowCount; ++row) {
+            for (int col = 0; col < colCount; ++col) {
+                int sum = 0;
+                for (int i = 0; i < sumLength; ++i)
+                    sum += pv[i] * tm[i][col];
+                dpv[col] = sum;
+            }
+        }
+        tp.x = (int)dpv[0];
+        tp.y = (int)dpv[1];
+
+        return tp;
+    }
+
     public static void normalizeShape(Shape shape) {
         double[][] nm = new double[3][3];
         nm[0][0] = 1;
@@ -69,7 +98,7 @@ public class GAffineTransforms  {
         return tm;
     }
 
-    private static void applyTransformsForShape(Shape shape) {
+    public static void applyTransformsForShape(Shape shape) {
         int k = 0;
         for (Point point:shape.corePoints) {
             double[] pv = new double[3];
@@ -156,6 +185,62 @@ public class GAffineTransforms  {
         }
 
         return dpv;
+    }
+
+    private static double[][] getInverseMatrix(double [][]A)
+    {
+        double temp;
+
+        double[][] E = new double[3][3];
+
+
+        for (int i = 0; i < 3; i++)
+            for (int j = 0; j < 3; j++)
+            {
+                E[i][j] = 0f;
+
+                if (i == j)
+                    E[i][j] = 1f;
+            }
+
+        for (int k = 0; k < 3; k++)
+        {
+            temp = A[k][k];
+
+            for (int j = 0; j < 3; j++)
+            {
+                A[k][j] /= temp;
+                E[k][j] /= temp;
+            }
+
+            for (int i = k + 1; i < 3; i++)
+            {
+                temp = A[i][k];
+
+                for (int j = 0; j < 3; j++)
+                {
+                    A[i][j] -= A[k][j] * temp;
+                    E[i][j] -= E[k][j] * temp;
+                }
+            }
+        }
+
+        for (int k = 3 - 1; k > 0; k--)
+        {
+            for (int i = k - 1; i >= 0; i--)
+            {
+                temp = A[i][k];
+
+                for (int j = 0; j < 3; j++)
+                {
+                    A[i][j] -= A[k][j] * temp;
+                    E[i][j] -= E[k][j] * temp;
+                }
+            }
+        }
+
+        return E;
+
     }
 
     public static Point getShapeCenter(Shape shape) {

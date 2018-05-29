@@ -2,11 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1a7c833-10b9-43d5-b5d1-4e1dd341ecd1" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Controller/StyleGenerator.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/out/production/JDraw/Controller/ShapeManager.class" afterPath="$PROJECT_DIR$/out/production/JDraw/Controller/ShapeManager.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/JDraw/Model/Shapes/BezierLine.class" afterPath="$PROJECT_DIR$/out/production/JDraw/Model/Shapes/BezierLine.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/JDraw/Model/Shapes/Ellipse.class" afterPath="$PROJECT_DIR$/out/production/JDraw/Model/Shapes/Ellipse.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/JDraw/Model/Shapes/Geometry/GAffineTransforms.class" afterPath="$PROJECT_DIR$/out/production/JDraw/Model/Shapes/Geometry/GAffineTransforms.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/JDraw/Model/Shapes/Geometry/GBounds.class" afterPath="$PROJECT_DIR$/out/production/JDraw/Model/Shapes/Geometry/GBounds.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/JDraw/Model/Shapes/Geometry/GEllipse.class" afterPath="$PROJECT_DIR$/out/production/JDraw/Model/Shapes/Geometry/GEllipse.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/JDraw/Model/Shapes/Line.class" afterPath="$PROJECT_DIR$/out/production/JDraw/Model/Shapes/Line.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/JDraw/Model/Shapes/Polygon.class" afterPath="$PROJECT_DIR$/out/production/JDraw/Model/Shapes/Polygon.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/JDraw/Model/Shapes/Polyline.class" afterPath="$PROJECT_DIR$/out/production/JDraw/Model/Shapes/Polyline.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/JDraw/Model/Shapes/Rectange.class" afterPath="$PROJECT_DIR$/out/production/JDraw/Model/Shapes/Rectange.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/JDraw/Model/Shapes/Shape.class" afterPath="$PROJECT_DIR$/out/production/JDraw/Model/Shapes/Shape.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/JDraw/Model/Shapes/Triangle.class" afterPath="$PROJECT_DIR$/out/production/JDraw/Model/Shapes/Triangle.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/JDraw/Model/Tools/AffineTool.class" afterPath="$PROJECT_DIR$/out/production/JDraw/Model/Tools/AffineTool.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/JDraw/Model/Tools/SelectTool.class" afterPath="$PROJECT_DIR$/out/production/JDraw/Model/Tools/SelectTool.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/JDraw/View/MainForm$1.class" afterPath="$PROJECT_DIR$/out/production/JDraw/View/MainForm$1.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/JDraw/View/MainForm$2.class" afterPath="$PROJECT_DIR$/out/production/JDraw/View/MainForm$2.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/JDraw/View/MainForm$3.class" afterPath="$PROJECT_DIR$/out/production/JDraw/View/MainForm$3.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/JDraw/View/MainForm.class" afterPath="$PROJECT_DIR$/out/production/JDraw/View/MainForm.class" />
       <change beforePath="$PROJECT_DIR$/src/Controller/ShapeManager.java" afterPath="$PROJECT_DIR$/src/Controller/ShapeManager.java" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/StyleGenerator.java" afterPath="$PROJECT_DIR$/src/Controller/StyleGenerator.java" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Shapes/BezierLine.java" afterPath="$PROJECT_DIR$/src/Model/Shapes/BezierLine.java" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Shapes/Ellipse.java" afterPath="$PROJECT_DIR$/src/Model/Shapes/Ellipse.java" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Shapes/Geometry/GAffineTransforms.java" afterPath="$PROJECT_DIR$/src/Model/Shapes/Geometry/GAffineTransforms.java" />
       <change beforePath="$PROJECT_DIR$/src/Model/Shapes/Geometry/GBounds.java" afterPath="$PROJECT_DIR$/src/Model/Shapes/Geometry/GBounds.java" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Shapes/Line.java" afterPath="$PROJECT_DIR$/src/Model/Shapes/Line.java" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Shapes/Polygon.java" afterPath="$PROJECT_DIR$/src/Model/Shapes/Polygon.java" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Shapes/Polyline.java" afterPath="$PROJECT_DIR$/src/Model/Shapes/Polyline.java" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Shapes/Rectange.java" afterPath="$PROJECT_DIR$/src/Model/Shapes/Rectange.java" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Shapes/Shape.java" afterPath="$PROJECT_DIR$/src/Model/Shapes/Shape.java" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Shapes/Triangle.java" afterPath="$PROJECT_DIR$/src/Model/Shapes/Triangle.java" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Tools/AffineTool.java" afterPath="$PROJECT_DIR$/src/Model/Tools/AffineTool.java" />
       <change beforePath="$PROJECT_DIR$/src/Model/Tools/SelectTool.java" afterPath="$PROJECT_DIR$/src/Model/Tools/SelectTool.java" />
+      <change beforePath="$PROJECT_DIR$/src/View/MainForm.java" afterPath="$PROJECT_DIR$/src/View/MainForm.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,24 +47,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ShapeManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/ShapeManager.java">
+      <file leaf-file-name="BezierLine.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Model/Shapes/BezierLine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="27" column="45" lean-forward="false" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
+            <state relative-caret-position="210">
+              <caret line="16" column="5" lean-forward="false" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StyleGenerator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/StyleGenerator.java">
+      <file leaf-file-name="Line.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Model/Shapes/Line.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="27" lean-forward="false" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+            <state relative-caret-position="120">
+              <caret line="11" column="5" lean-forward="false" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AffineTool.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Model/Tools/AffineTool.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="595">
+              <caret line="64" column="38" lean-forward="false" selection-start-line="64" selection-start-column="38" selection-end-line="64" selection-end-column="38" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#648#649#0" expanded="true" />
+                <element signature="e#674#675#0" expanded="true" />
+                <element signature="e#2570#2571#0" expanded="true" />
+                <element signature="e#2597#2598#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GAffineTransforms.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Model/Shapes/Geometry/GAffineTransforms.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="332">
+              <caret line="88" column="21" lean-forward="true" selection-start-line="88" selection-start-column="21" selection-end-line="88" selection-end-column="21" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -43,22 +95,19 @@
       <file leaf-file-name="GBounds.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Model/Shapes/Geometry/GBounds.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="22" column="43" lean-forward="false" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
+            <state relative-caret-position="357">
+              <caret line="38" column="80" lean-forward="false" selection-start-line="38" selection-start-column="80" selection-end-line="38" selection-end-column="80" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainForm.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/View/MainForm.java">
+      <file leaf-file-name="LineTool.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Model/Tools/LineTool.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="656">
-              <caret line="71" column="55" lean-forward="false" selection-start-line="71" selection-start-column="55" selection-end-line="71" selection-end-column="55" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <marker date="1527506156792" expanded="false" signature="4906:4980" ph="// JFormDesigner - Variables declaration - DO NOT MODIFY" />
-              </folding>
+            <state relative-caret-position="150">
+              <caret line="17" column="84" lean-forward="true" selection-start-line="17" selection-start-column="84" selection-end-line="17" selection-end-column="84" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -67,19 +116,37 @@
         <entry file="file://$PROJECT_DIR$/src/Model/Shapes/Ellipse.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-              <folding>
-                <element signature="e#460#461#0" expanded="true" />
-              </folding>
+              <caret line="13" column="22" lean-forward="true" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SelectTool.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Model/Tools/SelectTool.java">
+      <file leaf-file-name="GEllipse.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Model/Shapes/Geometry/GEllipse.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="40" column="8" lean-forward="false" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
+            <state relative-caret-position="225">
+              <caret line="17" column="19" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Polyline.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Model/Shapes/Polyline.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="14" column="5" lean-forward="false" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Triangle.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Model/Shapes/Triangle.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="29" column="5" lean-forward="false" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -100,6 +167,7 @@
     <findStrings>
       <find>rotate</find>
       <find>core</find>
+      <find>getB</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -139,7 +207,6 @@
         <option value="$PROJECT_DIR$/src/View/Canvas.java" />
         <option value="$PROJECT_DIR$/src/View/ToolButton.java" />
         <option value="$PROJECT_DIR$/src/Model/Shapes/Geometry/GLine.java" />
-        <option value="$PROJECT_DIR$/src/Model/Tools/AffineTool.java" />
         <option value="$PROJECT_DIR$/src/Model/Tools/LineTool.java" />
         <option value="$PROJECT_DIR$/src/Model/Tools/EllipseTool.java" />
         <option value="$PROJECT_DIR$/src/Model/Tools/BezierTool.java" />
@@ -147,23 +214,24 @@
         <option value="$PROJECT_DIR$/src/Model/Tools/TriangleTool.java" />
         <option value="$PROJECT_DIR$/src/Model/Tools/PolylineTool.java" />
         <option value="$PROJECT_DIR$/src/Model/Tools/ScaleTool.java" />
-        <option value="$PROJECT_DIR$/src/Model/Shapes/Geometry/GAffineTransforms.java" />
-        <option value="$PROJECT_DIR$/src/Model/Shapes/Geometry/GEllipse.java" />
         <option value="$PROJECT_DIR$/src/Model/Tools/RectangleTool.java" />
-        <option value="$PROJECT_DIR$/src/Model/Shapes/Line.java" />
-        <option value="$PROJECT_DIR$/src/Model/Shapes/Rectange.java" />
-        <option value="$PROJECT_DIR$/src/Model/Shapes/Shape.java" />
-        <option value="$PROJECT_DIR$/src/Model/Shapes/Polygon.java" />
-        <option value="$PROJECT_DIR$/src/Model/Shapes/Triangle.java" />
-        <option value="$PROJECT_DIR$/src/Model/Shapes/BezierLine.java" />
-        <option value="$PROJECT_DIR$/src/Model/Shapes/Polyline.java" />
-        <option value="$PROJECT_DIR$/src/Model/Shapes/Ellipse.java" />
-        <option value="$PROJECT_DIR$/src/View/MainForm.java" />
         <option value="$PROJECT_DIR$/src/Controller/DrawManager.java" />
         <option value="$PROJECT_DIR$/src/Controller/StyleGenerator.java" />
-        <option value="$PROJECT_DIR$/src/Model/Shapes/Geometry/GBounds.java" />
         <option value="$PROJECT_DIR$/src/Controller/ShapeManager.java" />
         <option value="$PROJECT_DIR$/src/Model/Tools/SelectTool.java" />
+        <option value="$PROJECT_DIR$/src/View/MainForm.java" />
+        <option value="$PROJECT_DIR$/src/Model/Shapes/Ellipse.java" />
+        <option value="$PROJECT_DIR$/src/Model/Shapes/Rectange.java" />
+        <option value="$PROJECT_DIR$/src/Model/Shapes/Polygon.java" />
+        <option value="$PROJECT_DIR$/src/Model/Shapes/Polyline.java" />
+        <option value="$PROJECT_DIR$/src/Model/Shapes/Triangle.java" />
+        <option value="$PROJECT_DIR$/src/Model/Shapes/BezierLine.java" />
+        <option value="$PROJECT_DIR$/src/Model/Shapes/Line.java" />
+        <option value="$PROJECT_DIR$/src/Model/Shapes/Shape.java" />
+        <option value="$PROJECT_DIR$/src/Model/Shapes/Geometry/GBounds.java" />
+        <option value="$PROJECT_DIR$/src/Model/Shapes/Geometry/GEllipse.java" />
+        <option value="$PROJECT_DIR$/src/Model/Tools/AffineTool.java" />
+        <option value="$PROJECT_DIR$/src/Model/Shapes/Geometry/GAffineTransforms.java" />
       </list>
     </option>
   </component>
@@ -232,6 +300,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Model" type="462c0819:PsiDirectoryNode" />
               <item name="Shapes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JDraw" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JDraw" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Model" type="462c0819:PsiDirectoryNode" />
+              <item name="Shapes" type="462c0819:PsiDirectoryNode" />
+              <item name="Geometry" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="JDraw" type="b2602c69:ProjectViewProjectNode" />
@@ -342,7 +418,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99559000" />
+    <option name="totallyTimeSpent" value="116102000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -435,7 +511,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="65" />
+      <option name="time" value="79" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -449,22 +525,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/View/ImagePanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-9.0.4.jdk/Contents/Home/lib/src.zip!/java.desktop/java/awt/Component.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="3414" column="16" lean-forward="false" selection-start-line="3414" selection-start-column="16" selection-end-line="3414" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/IDrawable.java" />
-    <entry file="file://$PROJECT_DIR$/Icons.properties" />
     <entry file="file://$PROJECT_DIR$/resources/Line.png" />
     <entry file="file://$PROJECT_DIR$/resources/Ellipse.png" />
     <entry file="jar://$PROJECT_DIR$/lib/openapi-7.0.3.jar!/com/intellij/openapi/util/IconLoader.class">
@@ -545,27 +605,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="283">
           <caret line="251" column="25" lean-forward="false" selection-start-line="251" selection-start-column="25" selection-end-line="251" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Tools/AffineTool.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="53" column="4" lean-forward="false" selection-start-line="53" selection-start-column="4" selection-end-line="56" selection-end-column="5" />
           <folding>
-            <element signature="e#431#432#0" expanded="false" />
-            <element signature="e#472#473#0" expanded="false" />
-            <element signature="e#1351#1352#0" expanded="false" />
-            <element signature="e#1378#1379#0" expanded="false" />
+            <element signature="e#9618#9619#0" expanded="false" />
+            <element signature="e#9668#9669#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Tools/LineTool.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="17" column="84" lean-forward="true" selection-start-line="17" selection-start-column="84" selection-end-line="17" selection-end-column="84" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -627,13 +670,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="23" lean-forward="false" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Shapes/Geometry/GAffineTransforms.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="164" column="25" lean-forward="true" selection-start-line="164" selection-start-column="25" selection-end-line="164" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -644,17 +681,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Shapes/Geometry/GEllipse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="46" column="8" lean-forward="false" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-9.0.4.jdk/Contents/Home/lib/src.zip!/java.desktop/java/awt/Rectangle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="283">
           <caret line="209" column="11" lean-forward="false" selection-start-line="209" selection-start-column="11" selection-end-line="209" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -696,108 +727,186 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Shapes/Line.java">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-9.0.4.jdk/Contents/Home/lib/src.zip!/java.desktop/java/awt/Color.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Shapes/Rectange.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="21" column="38" lean-forward="false" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Shapes/Shape.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" column="31" lean-forward="false" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Shapes/Polygon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="18" column="8" lean-forward="false" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Shapes/Triangle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="33" column="8" lean-forward="false" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Shapes/BezierLine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="20" column="8" lean-forward="false" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Shapes/Polyline.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="18" column="8" lean-forward="false" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Shapes/Ellipse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state relative-caret-position="283">
+          <caret line="367" column="11" lean-forward="false" selection-start-line="367" selection-start-column="11" selection-end-line="367" selection-end-column="11" />
           <folding>
-            <element signature="e#460#461#0" expanded="true" />
+            <element signature="e#10351#10352#0" expanded="false" />
+            <element signature="e#10385#10386#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/MainForm.java">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-9.0.4.jdk/Contents/Home/lib/src.zip!/java.desktop/java/awt/Graphics2D.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="656">
-          <caret line="71" column="55" lean-forward="false" selection-start-line="71" selection-start-column="55" selection-end-line="71" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1527506156792" expanded="false" signature="4906:4980" ph="// JFormDesigner - Variables declaration - DO NOT MODIFY" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/StyleGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="27" lean-forward="false" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Shapes/Geometry/GBounds.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="22" column="43" lean-forward="false" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/ShapeManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="27" column="45" lean-forward="false" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
+        <state relative-caret-position="219">
+          <caret line="789" column="25" lean-forward="false" selection-start-line="789" selection-start-column="25" selection-end-line="789" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/Tools/SelectTool.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="40" column="8" lean-forward="false" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
+        <state relative-caret-position="529">
+          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#919#920#0" expanded="true" />
+            <element signature="e#991#992#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/MainForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="39" column="17" lean-forward="false" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
+          <folding>
+            <marker date="1527508198640" expanded="false" signature="5012:5086" ph="// JFormDesigner - Variables declaration - DO NOT MODIFY" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/StyleGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-9.0.4.jdk/Contents/Home/lib/src.zip!/java.desktop/java/awt/geom/Ellipse2D.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1337">
+          <caret line="41" column="22" lean-forward="false" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/ShapeManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="33" column="40" lean-forward="true" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-9.0.4.jdk/Contents/Home/lib/src.zip!/java.desktop/java/awt/geom/Path2D.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="537">
+          <caret line="1560" column="9" lean-forward="true" selection-start-line="1542" selection-start-column="8" selection-end-line="1560" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Shapes/Rectange.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="17" column="5" lean-forward="false" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Shapes/Polygon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="14" column="5" lean-forward="false" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Shapes/Polyline.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="14" column="5" lean-forward="false" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Shapes/Shape.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="12" column="40" lean-forward="false" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Shapes/Geometry/GBounds.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="38" column="80" lean-forward="false" selection-start-line="38" selection-start-column="80" selection-end-line="38" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Tools/LineTool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="17" column="84" lean-forward="true" selection-start-line="17" selection-start-column="84" selection-end-line="17" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Shapes/Line.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="11" column="5" lean-forward="false" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Shapes/BezierLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="16" column="5" lean-forward="false" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Shapes/Triangle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="29" column="5" lean-forward="false" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Shapes/Ellipse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="13" column="22" lean-forward="true" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Shapes/Geometry/GEllipse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="17" column="19" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Tools/AffineTool.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="64" column="38" lean-forward="false" selection-start-line="64" selection-start-column="38" selection-end-line="64" selection-end-column="38" />
+          <folding>
+            <element signature="e#648#649#0" expanded="true" />
+            <element signature="e#674#675#0" expanded="true" />
+            <element signature="e#2570#2571#0" expanded="true" />
+            <element signature="e#2597#2598#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Shapes/Geometry/GAffineTransforms.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="88" column="21" lean-forward="true" selection-start-line="88" selection-start-column="21" selection-end-line="88" selection-end-column="21" />
           <folding />
         </state>
       </provider>

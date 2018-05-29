@@ -13,9 +13,4 @@ public class Polyline extends Shape {
         }
 
     }
-
-    @Override
-    public Rectangle2D getBounds() {
-        return null;
-    }
 }
