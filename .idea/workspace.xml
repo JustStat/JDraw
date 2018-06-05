@@ -3,39 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="c1a7c833-10b9-43d5-b5d1-4e1dd341ecd1" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/JDraw/Controller/ShapeManager.class" afterPath="$PROJECT_DIR$/out/production/JDraw/Controller/ShapeManager.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/JDraw/Model/Shapes/BezierLine.class" afterPath="$PROJECT_DIR$/out/production/JDraw/Model/Shapes/BezierLine.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/JDraw/Model/Shapes/Ellipse.class" afterPath="$PROJECT_DIR$/out/production/JDraw/Model/Shapes/Ellipse.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/JDraw/Model/Shapes/Geometry/GAffineTransforms.class" afterPath="$PROJECT_DIR$/out/production/JDraw/Model/Shapes/Geometry/GAffineTransforms.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/JDraw/Model/Shapes/Geometry/GBounds.class" afterPath="$PROJECT_DIR$/out/production/JDraw/Model/Shapes/Geometry/GBounds.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/JDraw/Model/Shapes/Geometry/GEllipse.class" afterPath="$PROJECT_DIR$/out/production/JDraw/Model/Shapes/Geometry/GEllipse.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/JDraw/Model/Shapes/Line.class" afterPath="$PROJECT_DIR$/out/production/JDraw/Model/Shapes/Line.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/JDraw/Model/Shapes/Polygon.class" afterPath="$PROJECT_DIR$/out/production/JDraw/Model/Shapes/Polygon.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/JDraw/Model/Shapes/Polyline.class" afterPath="$PROJECT_DIR$/out/production/JDraw/Model/Shapes/Polyline.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/JDraw/Model/Shapes/Rectange.class" afterPath="$PROJECT_DIR$/out/production/JDraw/Model/Shapes/Rectange.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/JDraw/Model/Shapes/Shape.class" afterPath="$PROJECT_DIR$/out/production/JDraw/Model/Shapes/Shape.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/JDraw/Model/Shapes/Triangle.class" afterPath="$PROJECT_DIR$/out/production/JDraw/Model/Shapes/Triangle.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/JDraw/Model/Tools/AffineTool.class" afterPath="$PROJECT_DIR$/out/production/JDraw/Model/Tools/AffineTool.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/JDraw/Model/Tools/SelectTool.class" afterPath="$PROJECT_DIR$/out/production/JDraw/Model/Tools/SelectTool.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/JDraw/View/MainForm$1.class" afterPath="$PROJECT_DIR$/out/production/JDraw/View/MainForm$1.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/JDraw/View/MainForm$2.class" afterPath="$PROJECT_DIR$/out/production/JDraw/View/MainForm$2.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/JDraw/View/Canvas.class" afterPath="$PROJECT_DIR$/out/production/JDraw/View/Canvas.class" />
       <change beforePath="$PROJECT_DIR$/out/production/JDraw/View/MainForm$3.class" afterPath="$PROJECT_DIR$/out/production/JDraw/View/MainForm$3.class" />
       <change beforePath="$PROJECT_DIR$/out/production/JDraw/View/MainForm.class" afterPath="$PROJECT_DIR$/out/production/JDraw/View/MainForm.class" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ShapeManager.java" afterPath="$PROJECT_DIR$/src/Controller/ShapeManager.java" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/StyleGenerator.java" afterPath="$PROJECT_DIR$/src/Controller/StyleGenerator.java" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Shapes/BezierLine.java" afterPath="$PROJECT_DIR$/src/Model/Shapes/BezierLine.java" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Shapes/Ellipse.java" afterPath="$PROJECT_DIR$/src/Model/Shapes/Ellipse.java" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Shapes/Geometry/GAffineTransforms.java" afterPath="$PROJECT_DIR$/src/Model/Shapes/Geometry/GAffineTransforms.java" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Shapes/Geometry/GBounds.java" afterPath="$PROJECT_DIR$/src/Model/Shapes/Geometry/GBounds.java" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Shapes/Line.java" afterPath="$PROJECT_DIR$/src/Model/Shapes/Line.java" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Shapes/Polygon.java" afterPath="$PROJECT_DIR$/src/Model/Shapes/Polygon.java" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Shapes/Polyline.java" afterPath="$PROJECT_DIR$/src/Model/Shapes/Polyline.java" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Shapes/Rectange.java" afterPath="$PROJECT_DIR$/src/Model/Shapes/Rectange.java" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Shapes/Shape.java" afterPath="$PROJECT_DIR$/src/Model/Shapes/Shape.java" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Shapes/Triangle.java" afterPath="$PROJECT_DIR$/src/Model/Shapes/Triangle.java" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Tools/AffineTool.java" afterPath="$PROJECT_DIR$/src/Model/Tools/AffineTool.java" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Tools/SelectTool.java" afterPath="$PROJECT_DIR$/src/Model/Tools/SelectTool.java" />
+      <change beforePath="$PROJECT_DIR$/out/production/JDraw/View/MainForm.jfd" afterPath="$PROJECT_DIR$/out/production/JDraw/View/MainForm.jfd" />
+      <change beforePath="$PROJECT_DIR$/src/View/Canvas.java" afterPath="$PROJECT_DIR$/src/View/Canvas.java" />
       <change beforePath="$PROJECT_DIR$/src/View/MainForm.java" afterPath="$PROJECT_DIR$/src/View/MainForm.java" />
+      <change beforePath="$PROJECT_DIR$/src/View/MainForm.jfd" afterPath="$PROJECT_DIR$/src/View/MainForm.jfd" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -82,33 +56,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GAffineTransforms.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Model/Shapes/Geometry/GAffineTransforms.java">
+      <file leaf-file-name="MainForm.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/View/MainForm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="88" column="21" lean-forward="true" selection-start-line="88" selection-start-column="21" selection-end-line="88" selection-end-column="21" />
-              <folding />
+            <state relative-caret-position="641">
+              <caret line="76" column="5" lean-forward="true" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
+              <folding>
+                <element signature="method#initComponents#0;class#MainForm#0" expanded="false" />
+                <marker date="1527581575298" expanded="true" signature="7527:8247" ph="// JFormDesigner - Variables declaration - DO NOT MODIFY" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GBounds.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Model/Shapes/Geometry/GBounds.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="38" column="80" lean-forward="false" selection-start-line="38" selection-start-column="80" selection-end-line="38" selection-end-column="80" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LineTool.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Model/Tools/LineTool.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="17" column="84" lean-forward="true" selection-start-line="17" selection-start-column="84" selection-end-line="17" selection-end-column="84" />
-              <folding />
-            </state>
+      <file leaf-file-name="MainForm.jfd" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/View/MainForm.jfd">
+          <provider selected="true" editor-type-id="JFormDesigner">
+            <state />
           </provider>
         </entry>
       </file>
@@ -127,16 +91,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
               <caret line="17" column="19" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Polyline.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Model/Shapes/Polyline.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="14" column="5" lean-forward="false" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -190,7 +144,6 @@
         <option value="$PROJECT_DIR$/src/Model/Ellipse.java" />
         <option value="$PROJECT_DIR$/src/Model/Rectange.java" />
         <option value="$PROJECT_DIR$/src/Model/Line.java" />
-        <option value="$PROJECT_DIR$/src/View/MainForm.jfd" />
         <option value="$PROJECT_DIR$/src/Model/Triangle.java" />
         <option value="$PROJECT_DIR$/src/Model/Polyline.java" />
         <option value="$PROJECT_DIR$/src/Model/IRightClickable.java" />
@@ -204,7 +157,6 @@
         <option value="$PROJECT_DIR$/src/Model/BezierLine.java" />
         <option value="$PROJECT_DIR$/src/Model/BezierTool.java" />
         <option value="$PROJECT_DIR$/src/Model/Tools/Tool.java" />
-        <option value="$PROJECT_DIR$/src/View/Canvas.java" />
         <option value="$PROJECT_DIR$/src/View/ToolButton.java" />
         <option value="$PROJECT_DIR$/src/Model/Shapes/Geometry/GLine.java" />
         <option value="$PROJECT_DIR$/src/Model/Tools/LineTool.java" />
@@ -219,7 +171,6 @@
         <option value="$PROJECT_DIR$/src/Controller/StyleGenerator.java" />
         <option value="$PROJECT_DIR$/src/Controller/ShapeManager.java" />
         <option value="$PROJECT_DIR$/src/Model/Tools/SelectTool.java" />
-        <option value="$PROJECT_DIR$/src/View/MainForm.java" />
         <option value="$PROJECT_DIR$/src/Model/Shapes/Ellipse.java" />
         <option value="$PROJECT_DIR$/src/Model/Shapes/Rectange.java" />
         <option value="$PROJECT_DIR$/src/Model/Shapes/Polygon.java" />
@@ -232,6 +183,9 @@
         <option value="$PROJECT_DIR$/src/Model/Shapes/Geometry/GEllipse.java" />
         <option value="$PROJECT_DIR$/src/Model/Tools/AffineTool.java" />
         <option value="$PROJECT_DIR$/src/Model/Shapes/Geometry/GAffineTransforms.java" />
+        <option value="$PROJECT_DIR$/src/View/Canvas.java" />
+        <option value="$PROJECT_DIR$/src/View/MainForm.jfd" />
+        <option value="$PROJECT_DIR$/src/View/MainForm.java" />
       </list>
     </option>
   </component>
@@ -418,11 +372,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116102000" />
+    <option name="totallyTimeSpent" value="119015000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -432,7 +385,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.124" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.124" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -551,11 +504,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/MainForm.jfd">
-      <provider selected="true" editor-type-id="JFormDesigner">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/Tools/Tool.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -568,13 +516,6 @@
         <state relative-caret-position="285">
           <caret line="25" column="11" lean-forward="false" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/Canvas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -751,19 +692,9 @@
         <state relative-caret-position="529">
           <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#919#920#0" expanded="true" />
-            <element signature="e#991#992#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/MainForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="39" column="17" lean-forward="false" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
-          <folding>
-            <marker date="1527508198640" expanded="false" signature="5012:5086" ph="// JFormDesigner - Variables declaration - DO NOT MODIFY" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#919#920#0" expanded="false" />
+            <element signature="e#991#992#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -903,11 +834,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/MainForm.jfd">
+      <provider selected="true" editor-type-id="JFormDesigner">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/Shapes/Geometry/GAffineTransforms.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
+        <state relative-caret-position="694">
           <caret line="88" column="21" lean-forward="true" selection-start-line="88" selection-start-column="21" selection-end-line="88" selection-end-column="21" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/Canvas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="14" column="32" lean-forward="false" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/View/MainForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="641">
+          <caret line="76" column="5" lean-forward="true" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
+          <folding>
+            <element signature="method#initComponents#0;class#MainForm#0" expanded="false" />
+            <marker date="1527581575298" expanded="true" signature="7527:8247" ph="// JFormDesigner - Variables declaration - DO NOT MODIFY" />
+          </folding>
         </state>
       </provider>
     </entry>

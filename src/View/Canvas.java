@@ -11,7 +11,7 @@ public class Canvas extends JPanel {
     private Graphics buf;
 
     public Canvas() {
-        img = new BufferedImage(1000, 1000, BufferedImage.TYPE_INT_ARGB);
+        img = new BufferedImage(2500, 2500, BufferedImage.TYPE_INT_ARGB);
         buf = img.getGraphics();
     }
 
