@@ -29,6 +29,7 @@ public class MainForm extends JFrame {
                 if (toolManager.needRepaint()) {
                     imagePanel.draw();
                 }
+                propertyPanel.updateShapeList();
             }
 
             @Override
@@ -38,6 +39,7 @@ public class MainForm extends JFrame {
                 if (toolManager.needRepaint()) {
                     imagePanel.draw();
                 }
+                propertyPanel.updateShapeList();
             }
 
             @Override
@@ -52,7 +54,9 @@ public class MainForm extends JFrame {
                 if (toolManager.needRepaint()) {
                     imagePanel.draw();
                 }
+                propertyPanel.updateShapeList();
             }
+
 
             @Override
             public void mouseMoved(MouseEvent e) {
@@ -76,25 +80,30 @@ public class MainForm extends JFrame {
 
     }
 
+    public void updateCanvas() {
+        imagePanel.draw();
+    }
+
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         // Generated using JFormDesigner Evaluation license - Kirill Varlamov
         dialogPane = new JPanel();
         toolBar = new JToolBar();
         imagePanel = new Canvas();
-        panel1 = new JPanel();
-        scrollPane1 = new JScrollPane();
-        ShapeList = new JList();
-        panel2 = new JPanel();
-        label1 = new JLabel();
-        comboLineType = new JComboBox<>();
-        panel3 = new JPanel();
-        label2 = new JLabel();
-        comboFillType = new JComboBox();
-        panel4 = new JPanel();
-        label3 = new JLabel();
-        spinnerLineSize = new JSpinner();
-        panel5 = new JPanel();
+        propertyPanel = new PropertyPanel(this);
+//        panel1 = new JPanel();
+//        scrollPane1 = new JScrollPane();
+//        ShapeList = new JList();
+//        panel2 = new JPanel();
+//        label1 = new JLabel();
+//        comboLineType = new JComboBox<>();
+//        panel3 = new JPanel();
+//        label2 = new JLabel();
+//        comboFillType = new JComboBox();
+//        panel4 = new JPanel();
+//        label3 = new JLabel();
+//        spinnerLineSize = new JSpinner();
+//        panel5 = new JPanel();
 
         //======== this ========
         Container contentPane = getContentPane();
@@ -130,68 +139,68 @@ public class MainForm extends JFrame {
             }
             dialogPane.add(imagePanel, BorderLayout.CENTER);
 
-            //======== panel1 ========
-            {
-                panel1.setPreferredSize(new Dimension(100, 200));
-                panel1.setMaximumSize(new Dimension(100, 32767));
-                panel1.setLayout(new GridLayout(5, 1));
-
-                //======== scrollPane1 ========
-                {
-                    scrollPane1.setViewportView(ShapeList);
-                }
-                panel1.add(scrollPane1);
-
-                //======== panel2 ========
-                {
-                    panel2.setLayout(new GridLayout(2, 1));
-
-                    //---- label1 ----
-                    label1.setText("\u0422\u0438\u043f \u043b\u0438\u043d\u0438\u0438");
-                    panel2.add(label1);
-
-                    //---- comboLineType ----
-                    comboLineType.setModel(new DefaultComboBoxModel<>(new String[] {
-                        "______",
-                        "------",
-                        "_._._._"
-                    }));
-                    panel2.add(comboLineType);
-                }
-                panel1.add(panel2);
-
-                //======== panel3 ========
-                {
-                    panel3.setLayout(new GridLayout(2, 1));
-
-                    //---- label2 ----
-                    label2.setText("\u0422\u0438\u043f \u0437\u0430\u043b\u0438\u0432\u043a\u0438");
-                    panel3.add(label2);
-                    panel3.add(comboFillType);
-                }
-                panel1.add(panel3);
-
-                //======== panel4 ========
-                {
-                    panel4.setLayout(new GridLayout(2, 1));
-
-                    //---- label3 ----
-                    label3.setText("\u0422\u043e\u043b\u0449\u0438\u043d\u0430 \u043b\u0438\u043d\u0438\u0438");
-                    panel4.add(label3);
-
-                    //---- spinnerLineSize ----
-                    spinnerLineSize.setModel(new SpinnerNumberModel(1, 1, 100, 1));
-                    panel4.add(spinnerLineSize);
-                }
-                panel1.add(panel4);
-
-                //======== panel5 ========
-                {
-                    panel5.setLayout(new GridLayout(2, 1));
-                }
-                panel1.add(panel5);
-            }
-            dialogPane.add(panel1, BorderLayout.EAST);
+//            //======== panel1 ========
+//            {
+//                panel1.setPreferredSize(new Dimension(100, 200));
+//                panel1.setMaximumSize(new Dimension(100, 32767));
+//                panel1.setLayout(new GridLayout(5, 1));
+//
+//                //======== scrollPane1 ========
+//                {
+//                    scrollPane1.setViewportView(ShapeList);
+//                }
+//                panel1.add(scrollPane1);
+//
+//                //======== panel2 ========
+//                {
+//                    panel2.setLayout(new GridLayout(2, 1));
+//
+//                    //---- label1 ----
+//                    label1.setText("\u0422\u0438\u043f \u043b\u0438\u043d\u0438\u0438");
+//                    panel2.add(label1);
+//
+//                    //---- comboLineType ----
+//                    comboLineType.setModel(new DefaultComboBoxModel<>(new String[] {
+//                        "______",
+//                        "------",
+//                        "_._._._"
+//                    }));
+//                    panel2.add(comboLineType);
+//                }
+//                panel1.add(panel2);
+//
+//                //======== panel3 ========
+//                {
+//                    panel3.setLayout(new GridLayout(2, 1));
+//
+//                    //---- label2 ----
+//                    label2.setText("\u0422\u0438\u043f \u0437\u0430\u043b\u0438\u0432\u043a\u0438");
+//                    panel3.add(label2);
+//                    panel3.add(comboFillType);
+//                }
+//                panel1.add(panel3);
+//
+//                //======== panel4 ========
+//                {
+//                    panel4.setLayout(new GridLayout(2, 1));
+//
+//                    //---- label3 ----
+//                    label3.setText("\u0422\u043e\u043b\u0449\u0438\u043d\u0430 \u043b\u0438\u043d\u0438\u0438");
+//                    panel4.add(label3);
+//
+//                    //---- spinnerLineSize ----
+//                    spinnerLineSize.setModel(new SpinnerNumberModel(1, 1, 100, 1));
+//                    panel4.add(spinnerLineSize);
+//                }
+//                panel1.add(panel4);
+//
+//                //======== panel5 ========
+//                {
+//                    panel5.setLayout(new GridLayout(2, 1));
+//                }
+//                panel1.add(panel5);
+//            }
+            dialogPane.add(propertyPanel, BorderLayout.EAST);
         }
         contentPane.add(dialogPane, BorderLayout.CENTER);
         pack();
@@ -204,18 +213,19 @@ public class MainForm extends JFrame {
     private JPanel dialogPane;
     private JToolBar toolBar;
     private Canvas imagePanel;
-    private JPanel panel1;
-    private JScrollPane scrollPane1;
-    private JList ShapeList;
-    private JPanel panel2;
-    private JLabel label1;
-    private JComboBox<String> comboLineType;
-    private JPanel panel3;
-    private JLabel label2;
-    private JComboBox comboFillType;
-    private JPanel panel4;
-    private JLabel label3;
-    private JSpinner spinnerLineSize;
-    private JPanel panel5;
+    private PropertyPanel propertyPanel;
+//    private JPanel panel1;
+//    private JScrollPane scrollPane1;
+//    private JList ShapeList;
+//    private JPanel panel2;
+//    private JLabel label1;
+//    private JComboBox<String> comboLineType;
+//    private JPanel panel3;
+//    private JLabel label2;
+//    private JComboBox comboFillType;
+//    private JPanel panel4;
+//    private JLabel label3;
+//    private JSpinner spinnerLineSize;
+//    private JPanel panel5;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
 }

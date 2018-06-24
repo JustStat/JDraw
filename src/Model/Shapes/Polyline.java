@@ -13,4 +13,9 @@ public class Polyline extends Shape {
         }
 
     }
+
+    @Override
+    public String getName() {
+        return "Ломанная";
+    }
 }

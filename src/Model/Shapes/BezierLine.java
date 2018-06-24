@@ -50,4 +50,9 @@ public class BezierLine extends Shape {
             painter.drawLine(x1, y1, x2, y2);
         }
     }
+
+    @Override
+    public String getName() {
+        return "Безье";
+    }
 }

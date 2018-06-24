@@ -11,9 +11,14 @@ public class Shape {
     public double[][] affineMatrixTranslation;
     public double[][] affineMatrixRotation;
     public double[][] affineMatrixScale;
+    public Color strokeColor = Color.BLACK;
+    public Stroke strokeType = new BasicStroke();
 
 
-    public void paint(Graphics g) {}
+    public void paint(Graphics g) {
+        g.setColor(this.strokeColor);
+        ((Graphics2D)g).setStroke(this.strokeType);
+    }
 
     public Rectangle2D getBounds() {
         double x1, y1, x2, y2;
@@ -34,5 +39,9 @@ public class Shape {
         }
 
         return new Rectangle2D.Double(x1, y1, x2 - x1, y2 - y1);
+    }
+
+    public String getName() {
+        return "Unknown";
     }
 }
