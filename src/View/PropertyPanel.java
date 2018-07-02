@@ -1,14 +1,14 @@
 package View;
 
 import Controller.ShapeManager;
+import Controller.StyleGenerator;
 import Model.Shapes.Shape;
 
 import javax.swing.*;
-import javax.swing.event.ListDataEvent;
-import javax.swing.event.ListDataListener;
-import javax.swing.event.ListSelectionEvent;
-import javax.swing.event.ListSelectionListener;
+import javax.swing.event.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.lang.ref.SoftReference;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
@@ -53,9 +53,6 @@ public class PropertyPanel extends JPanel {
                             ShapeManager.getInstance().selectedShapes.add(shape);
                         }
                     }
-//
-
-
                     form.updateCanvas();
                 }
             });
@@ -77,6 +74,15 @@ public class PropertyPanel extends JPanel {
                     "------",
                     "_._._._"
             }));
+            comboLineType.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    for (Shape shape: ShapeManager.getInstance().selectedShapes) {
+                        shape.strokeType = comboLineType.getSelectedIndex();
+                    }
+                    ShapeManager.getInstance().currentStrokeType = comboLineType.getSelectedIndex();
+                }
+            });
             linePropPanel.add(comboLineType);
         }
         this.add(linePropPanel);
@@ -102,13 +108,23 @@ public class PropertyPanel extends JPanel {
 
             //---- spinnerLineSize ----
             spinnerLineSize.setModel(new SpinnerNumberModel(1, 1, 100, 1));
+            spinnerLineSize.addChangeListener(new ChangeListener() {
+                @Override
+                public void stateChanged(ChangeEvent e) {
+                    for (Shape shape: ShapeManager.getInstance().selectedShapes) {
+                        shape.strokeWidth = (Integer)spinnerLineSize.getValue();
+                    }
+                    ShapeManager.getInstance().currentStrokeSize = (Integer)spinnerLineSize.getValue();
+                    form.updateCanvas();
+                }
+            });
             lineSizePropPanel.add(spinnerLineSize);
         }
         this.add(lineSizePropPanel);
 
         //======== panel5 ========
         {
-            emptyPanel.setLayout(new GridLayout(2, 1));
+            emptyPanel.setLayout(new GridLayout(1, 1));
         }
         this.add(emptyPanel);
         this.form = new WeakReference<>(form);

@@ -12,6 +12,7 @@ public class GBounds {
 
     public static void drawBounds(Shape shape, Graphics g) {
         ((Graphics2D)g).setStroke(StyleGenerator.getDashedStroke());
+        g.setColor(Color.BLACK);
         Rectangle2D bounds = shape.getBounds();
         g.drawRect((int)bounds.getX(), (int)bounds.getY(), (int)bounds.getWidth(),(int)bounds.getHeight());
         ((Graphics2D)g).setStroke(new BasicStroke());

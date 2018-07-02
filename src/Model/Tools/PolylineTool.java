@@ -1,5 +1,7 @@
 package Model.Tools;
 
+import Controller.Actions.ActionManager;
+import Controller.Actions.AddAction;
 import Controller.ShapeManager;
 import Model.Shapes.Geometry.GAffineTransforms;
 import Model.Shapes.Polyline;
@@ -18,6 +20,7 @@ public class PolylineTool extends ShapeTool {
             shape.corePoints = new ArrayList<>(Collections.nCopies(1, e.getPoint()));
             GAffineTransforms.normalizeShape(shape);
             ShapeManager.getInstance().shapes.add(shape);
+            ActionManager.getInstance().addActionToList(new AddAction(shape));
         }
     }
 

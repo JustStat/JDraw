@@ -1,5 +1,7 @@
 package Model.Tools;
 
+import Controller.Actions.ActionManager;
+import Controller.Actions.AddAction;
 import Controller.ShapeManager;
 import Model.Shapes.Ellipse;
 import Model.Shapes.Geometry.GAffineTransforms;
@@ -18,6 +20,7 @@ public class EllipseTool extends ShapeTool {
         shape.corePoints = new ArrayList<>(Collections.nCopies(2, e.getPoint()));
         GAffineTransforms.normalizeShape(shape);
         ShapeManager.getInstance().shapes.add(shape);
+        ActionManager.getInstance().addActionToList(new AddAction(shape));
     }
 
     @Override

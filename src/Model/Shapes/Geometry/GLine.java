@@ -64,7 +64,8 @@ public class GLine {
                 y += pdy;//цикл идёт по иксу; сдвинуть вверх или вниз, если по y
             }
 
-            g.drawLine(x, y, x, y);
+//            g.drawLine(x, y, x, y);
+            g.drawLine(x1, y1, x2, y2);
         }
     }
 }

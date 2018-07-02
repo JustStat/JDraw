@@ -12,6 +12,10 @@ public class ShapeManager {
     public ArrayList<Shape> shapes = new ArrayList<>();
     public ArrayList<Shape> selectedShapes = new ArrayList<>();
     public ArrayList<java.awt.Shape> tempShapes = new ArrayList<>();
+    public int currentStrokeType = 0;
+    public Color currentStrokeColor = Color.BLACK;
+    public int currentStrokeSize = 1;
+    public Color currentFillColor = Color.WHITE;
 
     private static ShapeManager instance;
 
@@ -24,13 +28,17 @@ public class ShapeManager {
 
     public void paintAll(Graphics g) {
         for (Shape shape:shapes) {
-                shape.paint(g);
+            ((Graphics2D)g).setStroke(StyleGenerator.getStrokeWithType(currentStrokeType, currentStrokeSize));
+            g.setColor(currentStrokeColor);
+            shape.paint(g);
             if (selectedShapes.contains(shape)) {
                 GBounds.drawBounds(shape, g);
                 GBounds.drawCorePoints(shape, g);
             }
         }
         for (java.awt.Shape shape:tempShapes) {
+            ((Graphics2D)g).setStroke(StyleGenerator.getDashedStroke());
+            g.setColor(Color.BLACK);
             ((Graphics2D)g).draw(shape);
         }
     }

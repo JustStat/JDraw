@@ -5,12 +5,14 @@
 package View;
 
 import java.awt.*;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseMotionListener;
+import java.awt.event.*;
 import javax.swing.*;
+import javax.swing.colorchooser.ColorSelectionModel;
+import javax.swing.event.ChangeListener;
 
+import Controller.ShapeManager;
 import Controller.ToolManager;
+import Model.Shapes.Shape;
 import Model.Tools.*;
 
 /**
@@ -18,6 +20,8 @@ import Model.Tools.*;
  */
 public class MainForm extends JFrame {
     public ToolManager toolManager = ToolManager.getInstance();
+    private Boolean isChangingFillColor = false;
+
     public MainForm() {
         initComponents();
 
@@ -40,11 +44,6 @@ public class MainForm extends JFrame {
                     imagePanel.draw();
                 }
                 propertyPanel.updateShapeList();
-            }
-
-            @Override
-            public void mouseClicked(MouseEvent e) {
-                super.mouseClicked(e);
             }
         });
         imagePanel.addMouseMotionListener(new MouseMotionListener() {
@@ -139,6 +138,42 @@ public class MainForm extends JFrame {
             }
             dialogPane.add(imagePanel, BorderLayout.CENTER);
 
+            JColorChooser clChooser = new JColorChooser();
+            clChooser.setSelectionModel(new ColorSelectionModel() {
+                @Override
+                public Color getSelectedColor() {
+                    return null;
+                }
+
+                @Override
+                public void setSelectedColor(Color color) {
+                    ShapeManager.getInstance().currentStrokeColor = color;
+                    for (Shape shape: ShapeManager.getInstance().selectedShapes) {
+                        shape.strokeColor = color;
+                    }
+                    imagePanel.draw();
+                }
+
+                @Override
+                public void addChangeListener(ChangeListener listener) {
+
+                }
+
+                @Override
+                public void removeChangeListener(ChangeListener listener) {
+
+                }
+            });
+            clChooser.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    super.mouseClicked(e);
+                    int clicks = e.getClickCount();
+                }
+            });
+            dialogPane.add(clChooser, BorderLayout.SOUTH);
+
+
 //            //======== panel1 ========
 //            {
 //                panel1.setPreferredSize(new Dimension(100, 200));
@@ -203,6 +238,8 @@ public class MainForm extends JFrame {
             dialogPane.add(propertyPanel, BorderLayout.EAST);
         }
         contentPane.add(dialogPane, BorderLayout.CENTER);
+        actionPannel = new ActionPannel(this);
+        contentPane.add(actionPannel, BorderLayout.NORTH);
         pack();
         setLocationRelativeTo(getOwner());
         // JFormDesigner - End of component initialization  //GEN-END:initComponents
@@ -214,6 +251,7 @@ public class MainForm extends JFrame {
     private JToolBar toolBar;
     private Canvas imagePanel;
     private PropertyPanel propertyPanel;
+    private ActionPannel actionPannel;
 //    private JPanel panel1;
 //    private JScrollPane scrollPane1;
 //    private JList ShapeList;

@@ -1,5 +1,7 @@
 package Model.Tools;
 
+import Controller.Actions.ActionManager;
+import Controller.Actions.AddAction;
 import Controller.ShapeManager;
 import Model.Shapes.Geometry.GAffineTransforms;
 import Model.Shapes.Rectange;
@@ -21,6 +23,7 @@ public class RectangleTool extends ShapeTool {
         shape.corePoints = new ArrayList<Point>(Collections.nCopies(4,  e.getPoint()));
         GAffineTransforms.normalizeShape(shape);
         ShapeManager.getInstance().shapes.add(shape);
+        ActionManager.getInstance().addActionToList(new AddAction(shape));
     }
 
     @Override

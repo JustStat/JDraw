@@ -1,5 +1,7 @@
 package Model.Tools;
 
+import Controller.Actions.ActionManager;
+import Controller.Actions.EditAction;
 import Controller.ShapeManager;
 import Model.Shapes.Geometry.GAffineTransforms;
 import Model.Shapes.Geometry.GBounds;
@@ -9,6 +11,7 @@ import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.geom.AffineTransform;
 import java.awt.geom.Rectangle2D;
+import java.util.ArrayList;
 
 import static java.lang.Math.PI;
 
@@ -17,18 +20,28 @@ public class AffineTool extends ShapeTool {
     double curangle = 0;
     int rtx = 0, rty = 0;
     Shape editShape;
+    ArrayList<Shape> sourceArray = new ArrayList<>();
+    ArrayList<Shape> origignalShapes = new ArrayList<>();
+    ArrayList<Shape> editedShapes = new ArrayList<>();
+    EditAction action = new EditAction();
     int index = -1;
 
     @Override
     public void mousePressed(MouseEvent e) {
         startPoint = e.getPoint();
-
-
+        ActionManager.getInstance().addActionToList(action);
+        if (ShapeManager.getInstance().selectedShapes.size() == 0) {
+            sourceArray = ShapeManager.getInstance().shapes;
+        } else {
+            sourceArray = ShapeManager.getInstance().selectedShapes;
+        }
+        action.saveOriginalShapes(sourceArray);
     }
 
     @Override
     public void mouseReleased(MouseEvent e) {
         index = -1;
+        ActionManager.getInstance().saveEditedShapes(editedShapes);
     }
 
     @Override
@@ -56,20 +69,32 @@ public class AffineTool extends ShapeTool {
                     GAffineTransforms.applyTransformsForShape(editShape);
                 }
             } else {
-                for (Shape shape : ShapeManager.getInstance().shapes) {
+                origignalShapes.clear();
+                editedShapes.clear();
+                for (Shape shape : sourceArray) {
                     deltaX = e.getX() - startPoint.x;
                     deltaY = e.getY() - startPoint.y;
+                    origignalShapes.add(shape);
                     GAffineTransforms.moveShape(shape, deltaX, deltaY);
+                    try {
+                        editedShapes.add(shape);
+                    } catch (Throwable throwable) {
+
+                    }
+
                 }
             }
             startPoint = e.getPoint();
         } else {
             curangle += getAngle(e.getPoint(), new Point(rtx, rty));
-            for (Shape shape: ShapeManager.getInstance().shapes) {
-
+            origignalShapes.clear();
+            editedShapes.clear();
+            for (Shape shape : sourceArray) {
+                origignalShapes.add((Shape)shape);
                 GAffineTransforms.rotateShape(shape, Math.toRadians(curangle));
                 rtx = e.getX();
                 rty = e.getY();
+                editedShapes.add(shape);
             }
         }
 
